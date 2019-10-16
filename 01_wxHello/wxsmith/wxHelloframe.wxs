@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="wxHelloFrame">
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxButton" name="ID_BUTTON_HELLO" variable="ButtonHello" member="yes">
+			<label>wxHelloWorld</label>
+			<pos>136,288</pos>
+			<handler function="OnButtonHelloClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxMenuBar" variable="MenuBar" member="no">
+			<object class="wxMenu" variable="MenuFile" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_QUIT" variable="MenuItemQuit" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="MenuHelp" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="ID_MENU_ABOUT" variable="MenuItemAbout" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR" variable="StatusBar" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
