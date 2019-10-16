@@ -95,7 +95,6 @@ wxHelloFrame::wxHelloFrame(wxWindow *parent, wxWindowID id)
     Connect(ID_BUTTON_HELLO, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&wxHelloFrame::OnButtonHelloClick);
     Connect(ID_MENUITEM_QUIT, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&wxHelloFrame::OnQuit);
     Connect(ID_MENU_ABOUT, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&wxHelloFrame::OnAbout);
-    //Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&wxHelloFrame::OnClose);
 #endif
     //*)
 }
@@ -116,14 +115,6 @@ void wxHelloFrame::OnAbout(wxCommandEvent &event)
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
 }
-
-#if 0
-//必须删除,否则程序无法退出
-void wxHelloFrame::OnClose(wxCloseEvent& event)
-{
-    Close();
-}
-#endif
 
 void wxHelloFrame::OnButtonHelloClick(wxCommandEvent &event)
 {
