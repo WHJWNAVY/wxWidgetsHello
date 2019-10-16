@@ -31,7 +31,9 @@ class wxWindowFrame: public wxFrame
         //*)
 
         //(*Identifiers(wxWindowFrame)
-        static const long ID_MENUITEM1;
+        static const long ID_MENU_QUIT;
+        static const long ID_MENU_IMPORT_NETWORK;
+        static const long ID_MENU_IMPORT_LOCAL;
         static const long ID_MENU_ABOUT;
         static const long ID_STATUSBAR;
         //*)

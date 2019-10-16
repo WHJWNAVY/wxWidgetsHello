@@ -8,7 +8,7 @@
 		<object class="wxMenuBar" variable="MenuBar" member="no">
 			<object class="wxMenu" variable="MenuFile" member="no">
 				<label>&amp;File</label>
-				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItemQuit" member="no">
+				<object class="wxMenuItem" name="ID_MENU_QUIT" variable="MenuItemQuit" member="no">
 					<label>Quit</label>
 					<accel>Alt-F4</accel>
 					<help>Quit the application</help>

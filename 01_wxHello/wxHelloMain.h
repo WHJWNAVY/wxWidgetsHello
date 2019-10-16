@@ -39,8 +39,8 @@ private:
     //*)
 
     //(*Declarations(wxHelloFrame)
-    wxButton *ButtonHello;
-    wxStatusBar *StatusBar;
+    wxButton* ButtonHello;
+    wxStatusBar* StatusBar;
     //*)
 
     DECLARE_EVENT_TABLE()
