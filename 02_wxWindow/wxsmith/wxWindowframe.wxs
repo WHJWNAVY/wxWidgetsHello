@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="wxWindowFrame">
+		<centered>1</centered>
+		<size>640,640</size>
+		<id_arg>0</id_arg>
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxNO_BORDER|wxCLIP_CHILDREN</style>
+		<object class="wxMenuBar" variable="MenuBar" member="no">
+			<object class="wxMenu" variable="MenuFile" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItemQuit" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="MenuHelp" member="no">
+				<label>Help</label>
+				<object class="wxMenuItem" name="ID_MENU_ABOUT" variable="MenuItemAbout" member="no">
+					<label>About</label>
+					<accel>F1</accel>
+					<help>Show info about this application</help>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR" variable="StatusBar" member="yes">
+			<fields>1</fields>
+			<widths>-1</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+	</object>
+</wxsmith>
