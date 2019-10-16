@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="wxHelloFrame">
+		<centered>1</centered>
+		<size>640,480</size>
 		<id_arg>0</id_arg>
-		<handler function="OnClose" entry="EVT_CLOSE" />
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxNO_BORDER|wxCLIP_CHILDREN</style>
 		<object class="wxButton" name="ID_BUTTON_HELLO" variable="ButtonHello" member="yes">
 			<label>wxHelloWorld</label>
 			<pos>136,288</pos>
