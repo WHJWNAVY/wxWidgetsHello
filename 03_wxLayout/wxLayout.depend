@@ -1834,9 +1834,11 @@
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\univ\theme.h
 	"wx/string.h"
 
-1571285289 f:\my_code\wxwidgets\03_wxlayout\wxlayoutmain.h
+1571306269 f:\my_code\wxwidgets\03_wxlayout\wxlayoutmain.h
+	<wx/button.h>
 	<wx/frame.h>
 	<wx/menu.h>
+	<wx/sizer.h>
 	<wx/statusbr.h>
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\menu.h
@@ -1917,7 +1919,7 @@
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\menu.h
 
-1571285298 source:f:\my_code\wxwidgets\03_wxlayout\wxlayoutmain.cpp
+1571305838 source:f:\my_code\wxwidgets\03_wxlayout\wxlayoutmain.cpp
 	"wxLayoutMain.h"
 	<wx/msgdlg.h>
 	<wx/intl.h>
@@ -2010,4 +2012,149 @@
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\msgdlg.h
 	"wx/msgdlg.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\textctrl.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/textentry.h"
+	"wx/dynarray.h"
+	"wx/gdicmn.h"
+	"wx/ioswrap.h"
+	"wx/x11/textctrl.h"
+	"wx/univ/textctrl.h"
+	"wx/msw/textctrl.h"
+	"wx/motif/textctrl.h"
+	"wx/gtk/textctrl.h"
+	"wx/gtk1/textctrl.h"
+	"wx/osx/textctrl.h"
+	"wx/qt/textctrl.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\textentry.h
+	"wx/filefn.h"
+	"wx/gdicmn.h"
+	"wx/gtk/textentry.h"
+	"wx/osx/textentry.h"
+	"wx/msw/textentry.h"
+	"wx/motif/textentry.h"
+	"wx/qt/textentry.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk\textentry.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\osx\textentry.h
+	"wx/control.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\textentry.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\motif\textentry.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\textentry.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\ioswrap.h
+	"wx/beforestd.h"
+	<iostream.h>
+	<iostream>
+	"wx/afterstd.h"
+	"wx/msw/winundef.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\x11\textctrl.h
+	"wx/univ/textctrl.h"
+	"wx/scrolwin.h"
+	"wx/arrstr.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\univ\textctrl.h
+	"wx/scrolwin.h"
+	"wx/univ/inphand.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\scrolwin.h
+	"wx/panel.h"
+	"wx/gtk/scrolwin.h"
+	"wx/gtk1/scrolwin.h"
+	"wx/generic/scrolwin.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk\scrolwin.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk1\scrolwin.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\generic\scrolwin.h
+	"wx/recguard.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\recguard.h
+	"wx/defs.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\textctrl.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\motif\textctrl.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk\textctrl.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk1\textctrl.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\osx\textctrl.h
+	"wx/control.h"
+	"wx/textctrl.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\textctrl.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\dcclient.h
+	"wx/dc.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\sizer.h
+	"wx/defs.h"
+	"wx/window.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\radiobut.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/univ/radiobut.h"
+	"wx/msw/radiobut.h"
+	"wx/motif/radiobut.h"
+	"wx/gtk/radiobut.h"
+	"wx/gtk1/radiobut.h"
+	"wx/osx/radiobut.h"
+	"wx/qt/radiobut.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\univ\radiobut.h
+	"wx/checkbox.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\checkbox.h
+	"wx/defs.h"
+	"wx/control.h"
+	"wx/univ/checkbox.h"
+	"wx/msw/checkbox.h"
+	"wx/motif/checkbox.h"
+	"wx/gtk/checkbox.h"
+	"wx/gtk1/checkbox.h"
+	"wx/osx/checkbox.h"
+	"wx/qt/checkbox.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\univ\checkbox.h
+	"wx/button.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\checkbox.h
+	"wx/msw/ownerdrawnbutton.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\ownerdrawnbutton.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\motif\checkbox.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk\checkbox.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk1\checkbox.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\osx\checkbox.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\checkbox.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\radiobut.h
+	"wx/msw/ownerdrawnbutton.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\motif\radiobut.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk\radiobut.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\gtk1\radiobut.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\osx\radiobut.h
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\radiobut.h
 

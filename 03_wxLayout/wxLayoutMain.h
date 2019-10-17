@@ -11,8 +11,10 @@
 #define WXLAYOUTMAIN_H
 
 //(*Headers(wxLayoutFrame)
+#include <wx/button.h>
 #include <wx/frame.h>
 #include <wx/menu.h>
+#include <wx/sizer.h>
 #include <wx/statusbr.h>
 //*)
 
@@ -28,15 +30,28 @@ class wxLayoutFrame: public wxFrame
         //(*Handlers(wxLayoutFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnButton2Click(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(wxLayoutFrame)
-        static const long ID_MENU_ITEM_QUIT;
+        static const long ID_BUTTON1;
+        static const long ID_BUTTON2;
+        static const long ID_BUTTON4;
+        static const long ID_BUTTON3;
+        static const long ID_BUTTON5;
+        static const long ID_BUTTON6;
+        static const long ID_MENUITEM1;
         static const long ID_MENU_ITEM_ABOUT;
         static const long ID_STATUSBAR;
         //*)
 
         //(*Declarations(wxLayoutFrame)
+        wxButton* Button1;
+        wxButton* Button2;
+        wxButton* Button3;
+        wxButton* Button4;
+        wxButton* Button5;
+        wxButton* Button6;
         wxStatusBar* StatusBar;
         //*)
 
