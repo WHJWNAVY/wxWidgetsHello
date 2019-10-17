@@ -77,7 +77,7 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
     Button2 = new wxButton(this, ID_BUTTON2, _("Label(0,1)"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
     FlexGridSizer1->Add(Button2, 2, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button4 = new wxButton(this, ID_BUTTON4, _("Label(0,2)"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
-    FlexGridSizer1->Add(Button4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(Button4, 1, wxALL|wxEXPAND, 5);
     Button3 = new wxButton(this, ID_BUTTON3, _("Label(1,0)"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
     FlexGridSizer1->Add(Button3, 2, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button5 = new wxButton(this, ID_BUTTON5, _("Label(1,1)"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON5"));

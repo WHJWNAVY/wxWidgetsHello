@@ -27,7 +27,7 @@
 				<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
 					<label>Label(0,2)</label>
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>
