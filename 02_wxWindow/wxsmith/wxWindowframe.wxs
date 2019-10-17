@@ -47,26 +47,26 @@
 					</object>
 				</object>
 				<object class="separator" />
-				<object class="wxMenuItem" name="ID_MENU_LINENUMBER" variable="MenuItem1" member="yes">
+				<object class="wxMenuItem" name="ID_MENU_LINENUMBER" variable="MenuItemLineNumber" member="yes">
 					<label>LineNumber</label>
 					<help>Show line number</help>
 					<checkable>1</checkable>
 				</object>
-				<object class="wxMenuItem" name="ID_MENU_LINEBREAK" variable="MenuItem2" member="yes">
+				<object class="wxMenuItem" name="ID_MENU_LINEBREAK" variable="MenuItemAutoBreak" member="yes">
 					<label>AutoBreak</label>
 					<help>Auto line break</help>
 					<checkable>1</checkable>
 				</object>
 				<object class="separator" />
-				<object class="wxMenu" name="ID_MENU_CODING" variable="MenuItem3" member="yes">
+				<object class="wxMenu" name="ID_MENU_CODING" variable="MenuItemCoding" member="yes">
 					<label>Coding</label>
 					<help>File encoding</help>
-					<object class="wxMenuItem" name="ID_MENU_CODING_ASCII" variable="MenuItem4" member="yes">
+					<object class="wxMenuItem" name="ID_MENU_CODING_ASCII" variable="MenuItemAscii" member="yes">
 						<label>ASCII</label>
 						<help>File encode with ascii</help>
 						<radio>1</radio>
 					</object>
-					<object class="wxMenuItem" name="ID_MENU_CODING_UTF8" variable="MenuItem5" member="yes">
+					<object class="wxMenuItem" name="ID_MENU_CODING_UTF8" variable="MenuItemUtf8" member="yes">
 						<label>UTF8</label>
 						<help>File encode with utf-8</help>
 						<radio>1</radio>

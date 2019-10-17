@@ -52,18 +52,18 @@ class wxWindowFrame: public wxFrame
         //*)
 
         //(*Declarations(wxWindowFrame)
-        wxMenu* MenuItem3;
         wxMenu* MenuItemAliyun;
+        wxMenu* MenuItemCoding;
         wxMenu* MenuItemNetwork;
         wxMenu* MenuItemOpen;
-        wxMenuItem* MenuItem1;
-        wxMenuItem* MenuItem2;
-        wxMenuItem* MenuItem4;
-        wxMenuItem* MenuItem5;
+        wxMenuItem* MenuItemAscii;
+        wxMenuItem* MenuItemAutoBreak;
+        wxMenuItem* MenuItemLineNumber;
         wxMenuItem* MenuItemLocal;
         wxMenuItem* MenuItemNeteasy;
         wxMenuItem* MenuItemTaobao;
         wxMenuItem* MenuItemTmall;
+        wxMenuItem* MenuItemUtf8;
         wxStatusBar* StatusBar;
         wxToolBar* ToolBar;
         wxToolBarToolBase* ToolBarItemOpen;
