@@ -5,6 +5,7 @@
 		<size>640,640</size>
 		<id_arg>0</id_arg>
 		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxNO_BORDER|wxCLIP_CHILDREN</style>
+		<handler function="OnRightUp" entry="EVT_RIGHT_UP" />
 		<object class="wxMenuBar" variable="MenuBar" member="no">
 			<object class="wxMenu" variable="MenuFile" member="no">
 				<label>&amp;File</label>
@@ -95,6 +96,14 @@
 				<bitmap2 stock_id="wxART_NEW_DIR" stock_client="wxART_TOOLBAR" />
 				<tooltip>Open file</tooltip>
 				<longhelp>Open file</longhelp>
+			</object>
+		</object>
+		<object class="wxMenu" variable="MenuPopUp" member="yes">
+			<object class="wxMenuItem" name="ID_MENU_POP_ADD" variable="MenuItemPopAdd" member="yes">
+				<label>Add</label>
+			</object>
+			<object class="wxMenuItem" name="ID_MENU_POP_DELETE" variable="MenuItemPopDelete" member="yes">
+				<label>Delete</label>
 			</object>
 		</object>
 	</object>

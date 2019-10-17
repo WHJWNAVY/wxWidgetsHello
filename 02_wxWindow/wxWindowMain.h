@@ -29,6 +29,7 @@ class wxWindowFrame: public wxFrame
         //(*Handlers(wxWindowFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnRightUp(wxMouseEvent& event);
         //*)
 
         //(*Identifiers(wxWindowFrame)
@@ -49,9 +50,12 @@ class wxWindowFrame: public wxFrame
         static const long ID_STATUSBAR;
         static const long ID_TOOLBAR_OPEN;
         static const long ID_TOOLBAR;
+        static const long ID_MENU_POP_ADD;
+        static const long ID_MENU_POP_DELETE;
         //*)
 
         //(*Declarations(wxWindowFrame)
+        wxMenu MenuPopUp;
         wxMenu* MenuItemAliyun;
         wxMenu* MenuItemCoding;
         wxMenu* MenuItemNetwork;
@@ -61,6 +65,8 @@ class wxWindowFrame: public wxFrame
         wxMenuItem* MenuItemLineNumber;
         wxMenuItem* MenuItemLocal;
         wxMenuItem* MenuItemNeteasy;
+        wxMenuItem* MenuItemPopAdd;
+        wxMenuItem* MenuItemPopDelete;
         wxMenuItem* MenuItemTaobao;
         wxMenuItem* MenuItemTmall;
         wxMenuItem* MenuItemUtf8;

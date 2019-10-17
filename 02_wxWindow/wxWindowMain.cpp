@@ -19,8 +19,10 @@
 //*)
 
 //helper functions
-enum wxbuildinfoformat {
-    short_f, long_f };
+enum wxbuildinfoformat
+{
+    short_f, long_f
+};
 
 wxString wxbuildinfo(wxbuildinfoformat format)
 {
@@ -62,6 +64,8 @@ const long wxWindowFrame::ID_MENU_ABOUT = wxNewId();
 const long wxWindowFrame::ID_STATUSBAR = wxNewId();
 const long wxWindowFrame::ID_TOOLBAR_OPEN = wxNewId();
 const long wxWindowFrame::ID_TOOLBAR = wxNewId();
+const long wxWindowFrame::ID_MENU_POP_ADD = wxNewId();
+const long wxWindowFrame::ID_MENU_POP_DELETE = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(wxWindowFrame,wxFrame)
@@ -126,10 +130,15 @@ wxWindowFrame::wxWindowFrame(wxWindow* parent,wxWindowID id)
     ToolBarItemOpen = ToolBar->AddTool(ID_TOOLBAR_OPEN, _("Open"), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_FILE_OPEN")),wxART_TOOLBAR), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_NEW_DIR")),wxART_TOOLBAR), wxITEM_NORMAL, _("Open file"), _("Open file"));
     ToolBar->Realize();
     SetToolBar(ToolBar);
+    MenuItemPopAdd = new wxMenuItem((&MenuPopUp), ID_MENU_POP_ADD, _("Add"), wxEmptyString, wxITEM_NORMAL);
+    MenuPopUp.Append(MenuItemPopAdd);
+    MenuItemPopDelete = new wxMenuItem((&MenuPopUp), ID_MENU_POP_DELETE, _("Delete"), wxEmptyString, wxITEM_NORMAL);
+    MenuPopUp.Append(MenuItemPopDelete);
     Center();
 
     Connect(ID_MENUITEM1,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnQuit);
     Connect(ID_MENU_ABOUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnAbout);
+    Connect(wxEVT_RIGHT_UP,(wxObjectEventFunction)&wxWindowFrame::OnRightUp);
     //*)
 }
 
@@ -148,4 +157,9 @@ void wxWindowFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void wxWindowFrame::OnRightUp(wxMouseEvent& event)
+{
+    PopupMenu(&MenuPopUp, event.GetPosition());
 }

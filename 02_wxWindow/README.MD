@@ -18,11 +18,15 @@
 
 ![多功能菜单2](pic/多功能菜单2.png)
 
-# 工具栏
+# 添加工具栏
 
 ![双击编辑工具栏](pic/双击编辑工具栏.png)
 
 ![工具栏](pic/工具栏.png)
+
+# 右键弹出菜单
+![右键弹出菜单](pic/右键弹出菜单0.png)
+![右键弹出菜单](pic/右键弹出菜单1.png)
 
 # 示例代码
 
@@ -105,12 +109,26 @@ wxWindowFrame::wxWindowFrame(wxWindow* parent,wxWindowID id)
     ToolBarItemOpen = ToolBar->AddTool(ID_TOOLBAR_OPEN, _("Open"), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_FILE_OPEN")),wxART_TOOLBAR), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_NEW_DIR")),wxART_TOOLBAR), wxITEM_NORMAL, _("Open file"), _("Open file"));
     ToolBar->Realize();
     SetToolBar(ToolBar);
+    
+    //右键菜单
+    MenuItemPopAdd = new wxMenuItem((&MenuPopUp), ID_MENU_POP_ADD, _("Add"), wxEmptyString, wxITEM_NORMAL);
+    MenuPopUp.Append(MenuItemPopAdd);
+    MenuItemPopDelete = new wxMenuItem((&MenuPopUp), ID_MENU_POP_DELETE, _("Delete"), wxEmptyString, wxITEM_NORMAL);
+    MenuPopUp.Append(MenuItemPopDelete);
+
     Center();
 
     //动态事件绑定
     Connect(ID_MENUITEM1,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnQuit);
     Connect(ID_MENU_ABOUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnAbout);
+    //右键菜单事件绑定
+    Connect(wxEVT_RIGHT_UP,(wxObjectEventFunction)&wxWindowFrame::OnRightUp);
     //*)
+}
+
+void wxWindowFrame::OnRightUp(wxMouseEvent& event)
+{
+    PopupMenu(&MenuPopUp, event.GetPosition());
 }
 ```
 
