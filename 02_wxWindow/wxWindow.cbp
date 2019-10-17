@@ -16,6 +16,7 @@
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
 					<Add directory="$(#gcc.INCLUDE)" />
+					<Add directory="F:/MY_CODE/wxWidgets/02_wxWindow/" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
