@@ -1,16 +1,16 @@
 # 布局控件标记
 
-![布局控件标记](pic\布局控件标记.png)
+![布局控件标记](pic/布局控件标记.png)
 
 # Absolute
 
-![绝对布局0](pic\绝对布局0.png)
+![绝对布局0](pic/绝对布局0.png)
 
 > 文本框的大小不会随着窗口大小的改变而改变
 
-![绝对布局1](pic\绝对布局1.png)
+![绝对布局1](pic/绝对布局1.png)
 
-![绝对布局2](pic\绝对布局2.png)
+![绝对布局2](pic/绝对布局2.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
@@ -35,15 +35,15 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
 
 # Using Sizers
 
-![Sizers0](pic\Sizers0.png)
+![Sizers0](pic/Sizers0.png)
 
 
 
 > wxTextCtrl放置在wxFrame内。 wxFrame具有一个特殊的内置sizer。 我们只能在wxFrame容器中放入一个控件。 该控件占据了wxFrame的所有空间，并随着wxFrame大小的改变而改变。[参考链接](http://zetcode.com/gui/wxwidgets/layoutmanagement/)
 
-![Sizers1](pic\Sizers1.png)
+![Sizers1](pic/Sizers1.png)
 
-![Sizers2](pic\Sizers2.png)
+![Sizers2](pic/Sizers2.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
@@ -67,21 +67,21 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
 
 # wxBoxSizer
 
-![wxBoxSizer0](pic\wxBoxSizer0.png)
+![wxBoxSizer0](pic/wxBoxSizer0.png)
 
 
 
 > 改变窗口大小的时候,wxBoxSizer内的控件会自动按比例重新计算大小,(示例中为 1:2:3)
 
-![wxBoxSizer1](pic\wxBoxSizer1.png)
+![wxBoxSizer1](pic/wxBoxSizer1.png)
 
-![wxBoxSizer2](pic\wxBoxSizer2.png)
+![wxBoxSizer2](pic/wxBoxSizer2.png)
 
 > wxBoxSizer可以根据需要选择控件排列方向,水平或垂直
 
-![wxBoxSizer3](pic\wxBoxSizer3.png)
+![wxBoxSizer3](pic/wxBoxSizer3.png)
 
-![wxBoxSizer4](pic\wxBoxSizer4.png)
+![wxBoxSizer4](pic/wxBoxSizer4.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
@@ -112,9 +112,9 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
 
 ## StaticBoxSizer
 
-![StaticBoxSizer0](pic\StaticBoxSizer0.png)
+![StaticBoxSizer0](pic/StaticBoxSizer0.png)
 
-![StaticBoxSizer1](pic\StaticBoxSizer1.png)
+![StaticBoxSizer1](pic/StaticBoxSizer1.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
@@ -146,13 +146,13 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
 
 # wxGridSizer
 
-![wxGridSizer0](pic\wxGridSizer0.png)
+![wxGridSizer0](pic/wxGridSizer0.png)
 
 > wxGridSizer可以以二维表的方式排列它的子控件,这个二维表中每个表格的大小都是相同的.都等于最长的那个表格的长度和最高的那个表格的高度.
 
-![wxGridSizer1](pic\wxGridSizer1.png)
+![wxGridSizer1](pic/wxGridSizer1.png)
 
-![wxGridSizer2](pic\wxGridSizer2.png)
+![wxGridSizer2](pic/wxGridSizer2.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
@@ -187,11 +187,11 @@ wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
 
 ## FlexGridSizer
 
-![FlexGridSizer0](pic\FlexGridSizer0.png)
+![FlexGridSizer0](pic/FlexGridSizer0.png)
 
-![FlexGridSizer1](pic\FlexGridSizer1.png)
+![FlexGridSizer1](pic/FlexGridSizer1.png)
 
-![FlexGridSizer2](pic\FlexGridSizer2.png)
+![FlexGridSizer2](pic/FlexGridSizer2.png)
 
 ```cpp
 wxLayoutFrame::wxLayoutFrame(wxWindow* parent,wxWindowID id)
