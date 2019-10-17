@@ -65,11 +65,9 @@ wxHelloFrame::wxHelloFrame(wxWindow *parent, wxWindowID id)
 {
     // xxxxxx
     Connect(ID_BUTTON_HELLO,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxHelloFrame::OnButtonHelloClick);
-
     Connect(ID_MENUITEM_QUIT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxHelloFrame::OnQuit);
-
     Connect(ID_MENU_ABOUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxHelloFrame::OnAbout);
-	// xxxxxx
+    // xxxxxx
 }
 
 void wxHelloFrame::OnQuit(wxCommandEvent &event)
