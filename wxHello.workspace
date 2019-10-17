@@ -2,5 +2,6 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="wxHello">
 		<Project filename="01_wxHello/wxHello.cbp" />
+		<Project filename="02_wxWindow/wxWindow.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

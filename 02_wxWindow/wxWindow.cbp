@@ -15,6 +15,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
+					<Add directory="$(#gcc.INCLUDE)" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_lib/mswu" />
@@ -38,6 +39,7 @@
 					<Add library="libwxzlib.a" />
 					<Add library="libwxregexu.a" />
 					<Add library="libwxexpat.a" />
+					<Add library="$(#gcc.LIB)/*.a" />
 					<Add directory="$(#wx)/lib/gcc_lib" />
 				</Linker>
 			</Target>
