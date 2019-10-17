@@ -8,11 +8,69 @@
 		<object class="wxMenuBar" variable="MenuBar" member="no">
 			<object class="wxMenu" variable="MenuFile" member="no">
 				<label>&amp;File</label>
-				<object class="wxMenuItem" name="ID_MENU_QUIT" variable="MenuItemQuit" member="no">
+				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItemQuit" member="no">
 					<label>Quit</label>
 					<accel>Alt-F4</accel>
 					<help>Quit the application</help>
 					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenu" name="ID_MENU_OPEN" variable="MenuItemOpen" member="yes">
+					<label>Open</label>
+					<help>Open file or project</help>
+					<object class="wxMenuItem" name="ID_MENU_OPEN_LOCAL" variable="MenuItemLocal" member="yes">
+						<label>Local</label>
+						<accel>Alt-F6</accel>
+						<help>Open file or project from local</help>
+					</object>
+					<object class="wxMenu" name="ID_MENU_OPEN_NET" variable="MenuItemNetwork" member="yes">
+						<label>Network</label>
+						<help>Open file or project from network</help>
+						<object class="wxMenuItem" name="ID_MENU_OPEN_NET163" variable="MenuItemNeteasy" member="yes">
+							<label>Neteasy</label>
+							<accel>Alt-F7</accel>
+							<help>Open file or project from 163.com</help>
+						</object>
+						<object class="wxMenu" name="ID_MENU_OPEN_NETALIYUN" variable="MenuItemAliyun" member="yes">
+							<label>Aliyun</label>
+							<help>Open file or project from aliyun</help>
+							<object class="wxMenuItem" name="ID_MENU_OPEN_NETALI_TAOBAO" variable="MenuItemTaobao" member="yes">
+								<label>Taobao</label>
+								<accel>Alt-F8</accel>
+								<help>Open file or project from taobao.com</help>
+							</object>
+							<object class="wxMenuItem" name="ID_MENU_OPEN_NETALI_TMALL" variable="MenuItemTmall" member="yes">
+								<label>Tmall</label>
+								<accel>Alt-F9</accel>
+								<help>Open file or project from tmall.com</help>
+							</object>
+						</object>
+					</object>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENU_LINENUMBER" variable="MenuItem1" member="yes">
+					<label>LineNumber</label>
+					<help>Show line number</help>
+					<checkable>1</checkable>
+				</object>
+				<object class="wxMenuItem" name="ID_MENU_LINEBREAK" variable="MenuItem2" member="yes">
+					<label>AutoBreak</label>
+					<help>Auto line break</help>
+					<checkable>1</checkable>
+				</object>
+				<object class="separator" />
+				<object class="wxMenu" name="ID_MENU_CODING" variable="MenuItem3" member="yes">
+					<label>Coding</label>
+					<help>File encoding</help>
+					<object class="wxMenuItem" name="ID_MENU_CODING_ASCII" variable="MenuItem4" member="yes">
+						<label>ASCII</label>
+						<help>File encode with ascii</help>
+						<radio>1</radio>
+					</object>
+					<object class="wxMenuItem" name="ID_MENU_CODING_UTF8" variable="MenuItem5" member="yes">
+						<label>UTF8</label>
+						<help>File encode with utf-8</help>
+						<radio>1</radio>
+					</object>
 				</object>
 			</object>
 			<object class="wxMenu" variable="MenuHelp" member="no">
@@ -29,6 +87,15 @@
 			<fields>1</fields>
 			<widths>-1</widths>
 			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxToolBar" name="ID_TOOLBAR" variable="ToolBar" member="yes">
+			<object class="tool" name="ID_TOOLBAR_OPEN" variable="ToolBarItemOpen" member="yes">
+				<label>Open</label>
+				<bitmap stock_id="wxART_FILE_OPEN" stock_client="wxART_TOOLBAR" />
+				<bitmap2 stock_id="wxART_NEW_DIR" stock_client="wxART_TOOLBAR" />
+				<tooltip>Open file</tooltip>
+				<longhelp>Open file</longhelp>
+			</object>
 		</object>
 	</object>
 </wxsmith>

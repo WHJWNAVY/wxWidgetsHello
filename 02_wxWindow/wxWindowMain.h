@@ -14,6 +14,7 @@
 #include <wx/frame.h>
 #include <wx/menu.h>
 #include <wx/statusbr.h>
+#include <wx/toolbar.h>
 //*)
 
 class wxWindowFrame: public wxFrame
@@ -31,15 +32,41 @@ class wxWindowFrame: public wxFrame
         //*)
 
         //(*Identifiers(wxWindowFrame)
-        static const long ID_MENU_QUIT;
-        static const long ID_MENU_IMPORT_NETWORK;
-        static const long ID_MENU_IMPORT_LOCAL;
+        static const long ID_MENUITEM1;
+        static const long ID_MENU_OPEN_LOCAL;
+        static const long ID_MENU_OPEN_NET163;
+        static const long ID_MENU_OPEN_NETALI_TAOBAO;
+        static const long ID_MENU_OPEN_NETALI_TMALL;
+        static const long ID_MENU_OPEN_NETALIYUN;
+        static const long ID_MENU_OPEN_NET;
+        static const long ID_MENU_OPEN;
+        static const long ID_MENU_LINENUMBER;
+        static const long ID_MENU_LINEBREAK;
+        static const long ID_MENU_CODING_ASCII;
+        static const long ID_MENU_CODING_UTF8;
+        static const long ID_MENU_CODING;
         static const long ID_MENU_ABOUT;
         static const long ID_STATUSBAR;
+        static const long ID_TOOLBAR_OPEN;
+        static const long ID_TOOLBAR;
         //*)
 
         //(*Declarations(wxWindowFrame)
+        wxMenu* MenuItem3;
+        wxMenu* MenuItemAliyun;
+        wxMenu* MenuItemNetwork;
+        wxMenu* MenuItemOpen;
+        wxMenuItem* MenuItem1;
+        wxMenuItem* MenuItem2;
+        wxMenuItem* MenuItem4;
+        wxMenuItem* MenuItem5;
+        wxMenuItem* MenuItemLocal;
+        wxMenuItem* MenuItemNeteasy;
+        wxMenuItem* MenuItemTaobao;
+        wxMenuItem* MenuItemTmall;
         wxStatusBar* StatusBar;
+        wxToolBar* ToolBar;
+        wxToolBarToolBase* ToolBarItemOpen;
         //*)
 
         DECLARE_EVENT_TABLE()

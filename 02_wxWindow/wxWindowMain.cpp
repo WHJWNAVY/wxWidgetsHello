@@ -11,6 +11,9 @@
 #include <wx/msgdlg.h>
 
 //(*InternalHeaders(wxWindowFrame)
+#include <wx/artprov.h>
+#include <wx/bitmap.h>
+#include <wx/image.h>
 #include <wx/intl.h>
 #include <wx/string.h>
 //*)
@@ -42,11 +45,23 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(wxWindowFrame)
-const long wxWindowFrame::ID_MENU_QUIT = wxNewId();
-const long wxWindowFrame::ID_MENU_IMPORT_NETWORK = wxNewId();
-const long wxWindowFrame::ID_MENU_IMPORT_LOCAL = wxNewId();
+const long wxWindowFrame::ID_MENUITEM1 = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_LOCAL = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_NET163 = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_NETALI_TAOBAO = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_NETALI_TMALL = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_NETALIYUN = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN_NET = wxNewId();
+const long wxWindowFrame::ID_MENU_OPEN = wxNewId();
+const long wxWindowFrame::ID_MENU_LINENUMBER = wxNewId();
+const long wxWindowFrame::ID_MENU_LINEBREAK = wxNewId();
+const long wxWindowFrame::ID_MENU_CODING_ASCII = wxNewId();
+const long wxWindowFrame::ID_MENU_CODING_UTF8 = wxNewId();
+const long wxWindowFrame::ID_MENU_CODING = wxNewId();
 const long wxWindowFrame::ID_MENU_ABOUT = wxNewId();
 const long wxWindowFrame::ID_STATUSBAR = wxNewId();
+const long wxWindowFrame::ID_TOOLBAR_OPEN = wxNewId();
+const long wxWindowFrame::ID_TOOLBAR = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(wxWindowFrame,wxFrame)
@@ -65,64 +80,55 @@ wxWindowFrame::wxWindowFrame(wxWindow* parent,wxWindowID id)
 
     Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxNO_BORDER|wxCLIP_CHILDREN, _T("wxID_ANY"));
     SetClientSize(wxSize(640,640));
-
     MenuBar = new wxMenuBar();
     MenuFile = new wxMenu();
-
-    //Quit菜单
-    MenuItemQuit = new wxMenuItem(MenuFile, ID_MENU_QUIT, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
+    MenuItemQuit = new wxMenuItem(MenuFile, ID_MENUITEM1, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
     MenuFile->Append(MenuItemQuit);
-    MenuFile->AppendSeparator();//分隔符
-    //Import菜单
-    wxMenu* MenuImport = new wxMenu();
-    //Import子菜单
-    wxMenuItem* MenuItemImportNetwork = new wxMenuItem(MenuImport, ID_MENU_IMPORT_NETWORK, _("Network\tAlt-F6"), _("Import file from network"), wxITEM_NORMAL);
-    wxMenuItem* MenuItemImportLocal = new wxMenuItem(MenuImport, ID_MENU_IMPORT_LOCAL, _("Local\tAlt-F7"), _("Import file from local"), wxITEM_NORMAL);
-    MenuImport->Append(MenuItemImportNetwork);
-    MenuImport->Append(MenuItemImportLocal);
-    MenuFile->AppendSubMenu(MenuImport, _("Import\tAlt-F5"));
-
+    MenuItemOpen = new wxMenu();
+    MenuItemLocal = new wxMenuItem(MenuItemOpen, ID_MENU_OPEN_LOCAL, _("Local\tAlt-F6"), _("Open file or project from local"), wxITEM_NORMAL);
+    MenuItemOpen->Append(MenuItemLocal);
+    MenuItemNetwork = new wxMenu();
+    MenuItemNeteasy = new wxMenuItem(MenuItemNetwork, ID_MENU_OPEN_NET163, _("Neteasy\tAlt-F7"), _("Open file or project from 163.com"), wxITEM_NORMAL);
+    MenuItemNetwork->Append(MenuItemNeteasy);
+    MenuItemAliyun = new wxMenu();
+    MenuItemTaobao = new wxMenuItem(MenuItemAliyun, ID_MENU_OPEN_NETALI_TAOBAO, _("Taobao\tAlt-F8"), _("Open file or project from taobao.com"), wxITEM_NORMAL);
+    MenuItemAliyun->Append(MenuItemTaobao);
+    MenuItemTmall = new wxMenuItem(MenuItemAliyun, ID_MENU_OPEN_NETALI_TMALL, _("Tmall\tAlt-F9"), _("Open file or project from tmall.com"), wxITEM_NORMAL);
+    MenuItemAliyun->Append(MenuItemTmall);
+    MenuItemNetwork->Append(ID_MENU_OPEN_NETALIYUN, _("Aliyun"), MenuItemAliyun, _("Open file or project from aliyun"));
+    MenuItemOpen->Append(ID_MENU_OPEN_NET, _("Network"), MenuItemNetwork, _("Open file or project from network"));
+    MenuFile->Append(ID_MENU_OPEN, _("Open"), MenuItemOpen, _("Open file or project"));
+    MenuFile->AppendSeparator();
+    MenuItem1 = new wxMenuItem(MenuFile, ID_MENU_LINENUMBER, _("LineNumber"), _("Show line number"), wxITEM_CHECK);
+    MenuFile->Append(MenuItem1);
+    MenuItem2 = new wxMenuItem(MenuFile, ID_MENU_LINEBREAK, _("AutoBreak"), _("Auto line break"), wxITEM_CHECK);
+    MenuFile->Append(MenuItem2);
+    MenuFile->AppendSeparator();
+    MenuItem3 = new wxMenu();
+    MenuItem4 = new wxMenuItem(MenuItem3, ID_MENU_CODING_ASCII, _("ASCII"), _("File encode with ascii"), wxITEM_RADIO);
+    MenuItem3->Append(MenuItem4);
+    MenuItem5 = new wxMenuItem(MenuItem3, ID_MENU_CODING_UTF8, _("UTF8"), _("File encode with utf-8"), wxITEM_RADIO);
+    MenuItem3->Append(MenuItem5);
+    MenuFile->Append(ID_MENU_CODING, _("Coding"), MenuItem3, _("File encoding"));
     MenuBar->Append(MenuFile, _("&File"));
-
-    //帮助菜单
     MenuHelp = new wxMenu();
-    //关于菜单
     MenuItemAbout = new wxMenuItem(MenuHelp, ID_MENU_ABOUT, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
     MenuHelp->Append(MenuItemAbout);
-
-    //二级说明子菜单
-    wxMenu* MenuRedme0 = new wxMenu();
-    //三级说明子菜单
-    MenuRedme0->Append(new wxMenuItem(MenuRedme0, wxID_ANY, _("Email0\tAlt-F7"), _("My Email 0"), wxITEM_NORMAL));
-    MenuRedme0->Append(new wxMenuItem(MenuRedme0, wxID_ANY, _("Website0\tAlt-F8"), _("My Website 0"), wxITEM_NORMAL));
-
-    //二级说明子菜单
-    wxMenu* MenuRedme1 = new wxMenu();
-    //三级说明子菜单
-    MenuRedme1->Append(new wxMenuItem(MenuRedme1, wxID_ANY, _("Email1\tAlt-F7"), _("My Email 1"), wxITEM_NORMAL));
-    MenuRedme1->Append(new wxMenuItem(MenuRedme1, wxID_ANY, _("Website1\tAlt-F8"), _("My Website 1"), wxITEM_NORMAL));
-
-    //一级说明子菜单
-    wxMenu* MenuRedme = new wxMenu();
-    MenuRedme->AppendSubMenu(MenuRedme0, _("Redme0"));
-    MenuRedme->AppendSubMenu(MenuRedme1, _("Redme1"));
-    MenuHelp->AppendSeparator();//分隔符
-    MenuHelp->AppendSubMenu(MenuRedme, _("Redme"));
     MenuBar->Append(MenuHelp, _("Help"));
-
     SetMenuBar(MenuBar);
-
-    //状态栏
     StatusBar = new wxStatusBar(this, ID_STATUSBAR, 0, _T("ID_STATUSBAR"));
     int __wxStatusBarWidths_1[1] = { -1 };
     int __wxStatusBarStyles_1[1] = { wxSB_NORMAL };
     StatusBar->SetFieldsCount(1,__wxStatusBarWidths_1);
     StatusBar->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar);
-
+    ToolBar = new wxToolBar(this, ID_TOOLBAR, wxDefaultPosition, wxDefaultSize, wxTB_HORIZONTAL|wxNO_BORDER, _T("ID_TOOLBAR"));
+    ToolBarItemOpen = ToolBar->AddTool(ID_TOOLBAR_OPEN, _("Open"), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_FILE_OPEN")),wxART_TOOLBAR), wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_NEW_DIR")),wxART_TOOLBAR), wxITEM_NORMAL, _("Open file"), _("Open file"));
+    ToolBar->Realize();
+    SetToolBar(ToolBar);
     Center();
 
-    Connect(ID_MENU_QUIT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnQuit);
+    Connect(ID_MENUITEM1,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnQuit);
     Connect(ID_MENU_ABOUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWindowFrame::OnAbout);
     //*)
 }

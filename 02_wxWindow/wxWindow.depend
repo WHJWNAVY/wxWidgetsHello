@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1514140570 source:f:\my_code\wxwidgets\02_wxwindow\resource.rc
+1571276290 source:f:\my_code\wxwidgets\02_wxwindow\resource.rc
 	"wx/msw/wx.rc"
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\wx.rc
@@ -212,12 +212,12 @@
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\msw\rcdefs.h
 
-1571221572 source:f:\my_code\wxwidgets\02_wxwindow\wxwindowapp.cpp
+1571276290 source:f:\my_code\wxwidgets\02_wxwindow\wxwindowapp.cpp
 	"wxWindowApp.h"
 	"wxWindowMain.h"
 	<wx/image.h>
 
-1571221572 f:\my_code\wxwidgets\02_wxwindow\wxwindowapp.h
+1571276290 f:\my_code\wxwidgets\02_wxwindow\wxwindowapp.h
 	<wx/app.h>
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\app.h
@@ -1834,10 +1834,11 @@
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\univ\theme.h
 	"wx/string.h"
 
-1571222338 f:\my_code\wxwidgets\02_wxwindow\wxwindowmain.h
+1571281785 f:\my_code\wxwidgets\02_wxwindow\wxwindowmain.h
 	<wx/frame.h>
 	<wx/menu.h>
 	<wx/statusbr.h>
+	<wx/toolbar.h>
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\menu.h
 	"wx/defs.h"
@@ -1917,9 +1918,12 @@
 
 1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\qt\menu.h
 
-1571221800 source:f:\my_code\wxwidgets\02_wxwindow\wxwindowmain.cpp
+1571281785 source:f:\my_code\wxwidgets\02_wxwindow\wxwindowmain.cpp
 	"wxWindowMain.h"
 	<wx/msgdlg.h>
+	<wx/artprov.h>
+	<wx/bitmap.h>
+	<wx/image.h>
 	<wx/intl.h>
 	<wx/string.h>
 
@@ -4026,4 +4030,10 @@
 
 1518985831 d:\wxwidgets\wxwidgets-3.1.1\include\wx\qt\msgdlg.h
 	"wx/msgdlg.h"
+
+1544344808 f:\my_code\wxwidgets\wxwidgets-3.1.2\include\wx\artprov.h
+	"wx/string.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+	"wx/iconbndl.h"
 
