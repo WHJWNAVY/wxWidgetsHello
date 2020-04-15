@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>wxWidgetstTmplate</Name>
+    <Description>wxWidgetst for vs2017</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>wxWidgetstTmplate</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="wxWidgetstTmplate.vcxproj" File="wxWidgetstTmplate.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">wxWidgetstTmplate.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="wxHelloMain.cpp">wxHelloMain.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="wxHelloApp.cpp">wxHelloApp.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="wxHelloMain.h">wxHelloMain.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="wxHelloApp.h">wxHelloApp.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="resource.rc">resource.rc</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
