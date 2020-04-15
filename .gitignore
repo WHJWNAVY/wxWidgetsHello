@@ -85,6 +85,7 @@ StyleCopReport.xml
 *.tmp_proj
 *_wpftmp.csproj
 *.log
+*.tlog
 *.vspscc
 *.vssscc
 .builds
@@ -452,3 +453,5 @@ dkms.conf
 wxWidgets-3.1.2.zip
 wxWidgets-3.0.4-docs-chm.zip
 wxWidgets-3.1.2
+wxWidgets-3.1.3.zip
+wxWidgets-3.1.3
