@@ -14,13 +14,13 @@
 // MyCanvas
 //-----------------------------------------------------------------------------
 
-class MyCanvas: public wxScrolledWindow
+class MyCanvas : public wxScrolledWindow
 {
 public:
-    MyCanvas( wxWindow *parent, wxWindowID, const wxPoint &pos, const wxSize &size );
+    MyCanvas(wxWindow *parent, wxWindowID, const wxPoint &pos, const wxSize &size);
     ~MyCanvas();
 
-    void OnPaint( wxPaintEvent &event );
+    void OnPaint(wxPaintEvent &event);
     void CreateAntiAliasedBitmap();
 
     wxBitmap  my_horse_png;
@@ -38,7 +38,7 @@ public:
     wxBitmap  my_horse_ico;
     wxBitmap  my_horse_cur;
     wxBitmap  my_png_from_res,
-              my_png_from_mem;
+        my_png_from_mem;
 
     wxBitmap  my_smile_xbm;
     wxBitmap  my_square;
