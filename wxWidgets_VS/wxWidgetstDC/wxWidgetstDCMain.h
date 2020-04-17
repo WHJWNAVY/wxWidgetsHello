@@ -8,6 +8,7 @@
 #ifndef __WX_WIDGETST_DC_MAIN_H__
 #define __WX_WIDGETST_DC_MAIN_H__
 
+#include <wx/wx.h>
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
 #include <wx/bitmap.h>
@@ -26,6 +27,7 @@
 #include <wx/statbox.h>
 #include <wx/frame.h>
 
+
 ///////////////////////////////////////////////////////////////////////////
 
 
@@ -37,19 +39,24 @@ class MyFrameHello : public wxFrame
 private:
 
 protected:
+    wxBoxSizer* bSizerMain;
     wxStaticBitmap* mBitmapMain;
-    wxStaticText* mStaticTextInfo;
+    wxStaticText* mStaticTextScoreInfo;
     wxStaticText* mStaticTextScore;
+    wxStaticText* mStaticTextSpeedInfo;
+    wxStaticText* mStaticTextSpeed;
+    wxStaticText* mStaticTextLifeInfo;
+    wxStaticText* mStaticTextLife;
     wxRadioBox* mRadioBoxBoundary;
     wxRadioBox* mRadioBoxInvincibleMode;
     wxButton* mButtonRenew;
     wxButton* mButtonStop;
-    wxButton* mButtonExit;
     wxButton* mButtonAbout;
 
     // Virtual event handlers, overide them in your derived class
     virtual void MyFrameHelloOnSize(wxSizeEvent& event) { event.Skip(); }
-
+    void mButtonRenewOnButtonClick(wxCommandEvent& event);
+    void mButtonStopOnButtonClick(wxCommandEvent& event);
 
 public:
 
