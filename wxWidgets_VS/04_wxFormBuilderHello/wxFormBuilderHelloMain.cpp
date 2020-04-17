@@ -76,7 +76,6 @@ MyFrameHello::MyFrameHello(wxWindow* parent, wxWindowID id, const wxString& titl
     m_radioBoxHello->SetSelection(0);
     gSizerHello->Add(m_radioBoxHello, 0, wxALL, 5);
 
-
     this->SetSizer(gSizerHello);
     this->Layout();
 
@@ -102,7 +101,6 @@ MyFrameHello::~MyFrameHello()
 // Virtual event handlers, overide them in your derived class
 void MyFrameHello::m_button_helloOnButtonClick(wxCommandEvent& event)
 {
-
     wxString msg = wxbuildinfo(long_f);
     msg << std::to_string(event.GetId());
     wxMessageBox(msg, _("Welcome to..."));
@@ -110,29 +108,29 @@ void MyFrameHello::m_button_helloOnButtonClick(wxCommandEvent& event)
 
 void MyFrameHello::m_comboBoxHelloOnCombobox(wxCommandEvent& event)
 {
-    wxString msg("OnCombobox-String:");
+    wxString msg(_("OnCombobox-String:"));
     msg << event.GetString();
     wxMessageBox(msg, _("Combobox..."));
 }
 
 void MyFrameHello::m_checkBoxHelloOnCheckBox(wxCommandEvent& event)
 {
-    wxString msg("OnCheckBox-IsChecked:");
+    wxString msg(_("OnCheckBox-IsChecked:"));
     if (event.IsChecked()) {
-        msg << "True";
+        msg << _("True");
     }
     else
     {
-        msg << "False";
+        msg << _("False");
     }
     wxMessageBox(msg, _("CheckBox..."));
 }
 
 void MyFrameHello::m_radioBoxHelloOnRadioBox(wxCommandEvent& event)
 {
-    wxString msg("OnRadioBox-Selection:");
+    wxString msg(_("OnRadioBox-Selection:"));
     msg << std::to_string(event.GetSelection());
-    msg << "-";
+    msg << _("-");
     msg << std::to_string(event.GetInt());
     wxMessageBox(msg, _("RadioBox..."));
 }
