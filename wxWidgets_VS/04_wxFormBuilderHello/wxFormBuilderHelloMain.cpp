@@ -95,7 +95,6 @@ MyFrameHello::~MyFrameHello()
     m_comboBoxHello->Disconnect(wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler(MyFrameHello::m_comboBoxHelloOnCombobox), NULL, this);
     m_checkBoxHello->Disconnect(wxEVT_COMMAND_CHECKBOX_CLICKED, wxCommandEventHandler(MyFrameHello::m_checkBoxHelloOnCheckBox), NULL, this);
     m_radioBoxHello->Disconnect(wxEVT_COMMAND_RADIOBOX_SELECTED, wxCommandEventHandler(MyFrameHello::m_radioBoxHelloOnRadioBox), NULL, this);
-
 }
 
 // Virtual event handlers, overide them in your derived class
