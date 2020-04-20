@@ -28,10 +28,10 @@
 
 #include <cstdlib>
 
-#include "engine/Game.hh"
-#include "engine/Snake.hh"
-#include "engine/Timer.hh"
-#include "ui/NibblesPanel.hh"
+#include "Game.h"
+#include "Snake.h"
+#include "Timer.h"
+#include "NibblesPanel.h"
 
 using namespace nibbles;
 

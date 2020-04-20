@@ -20,31 +20,27 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: EngineConstants.hh,v 1.6 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: UIConstants.h,v 1.9 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _ENGINECONSTANTS_HH_
-#define _ENGINECONSTANTS_HH_
+#ifndef _UICONSTANTS_HH_
+#define _UICONSTANTS_HH_
 
-#include "ui/UIConstants.hh"
+#include <wx/gdicmn.h>
 
-namespace nibbles {
-    /// The direction the Snake is moving in
-    enum Direction {
-        NORTH, EAST, SOUTH, WEST
+namespace {
+    // UI identifier constants
+    enum {
+        ID_FRAME = 10000,
+        ID_PANEL,
+        IDM_FILE_NEWGAME
     };
     
-    /// The difficulty setting of the Game
-    enum Difficulty {
-        NOVICE, AVERAGE, EXPERT
-    };
+    /// The size of a block
+    const int BLOCK_SIZE = 16;
     
-    /// The number of levels defined
-    const unsigned int LEVELS = 1;
-    
-    /// The level data
-    extern const unsigned char LEVEL_DATA[LEVELS]
-                                         [PANEL_HEIGHT / BLOCK_SIZE]
-                                         [PANEL_WIDTH / BLOCK_SIZE];
+    /// The NibblesPanel size
+    const int PANEL_WIDTH = 640;
+    const int PANEL_HEIGHT = 480;
 }
 
 #endif

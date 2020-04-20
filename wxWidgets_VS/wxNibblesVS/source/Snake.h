@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Snake.hh,v 1.7 2005/08/27 15:29:10 technoplaza Exp $
+// $Id: Snake.h,v 1.7 2005/08/27 15:29:10 technoplaza Exp $
 
 #ifndef _SNAKE_HH_
 #define _SNAKE_HH_
@@ -29,7 +29,7 @@
 
 #include <wx/gdicmn.h>
 
-#include "engine/EngineConstants.hh"
+#include "EngineConstants.h"
 
 namespace nibbles {
     class Snake {

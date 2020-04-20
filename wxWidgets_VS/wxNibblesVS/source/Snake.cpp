@@ -26,8 +26,8 @@
     #include <config.h>
 #endif
 
-#include "engine/Snake.hh"
-#include "ui/UIConstants.hh"
+#include "Snake.h"
+#include "UIConstants.h"
 
 using namespace nibbles;
 

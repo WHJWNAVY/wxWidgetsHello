@@ -20,15 +20,15 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: NibblesPanel.hh,v 1.11 2005/08/27 15:29:10 technoplaza Exp $
+// $Id: NibblesPanel.h,v 1.11 2005/08/27 15:29:10 technoplaza Exp $
 
 #ifndef _NIBBLESPANEL_HH_
 #define _NIBBLESPANEL_HH_
 
 #include <wx/panel.h>
 
-#include "engine/Game.hh"
-#include "ui/UIConstants.hh"
+#include "Game.h"
+#include "UIConstants.h"
 
 namespace nibbles {
     class NibblesPanel : public wxPanel {

@@ -20,12 +20,12 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: LevelData.hh,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: LevelData.h,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
 
 #ifndef _LEVELDATA_HH_
 #define _LEVELDATA_HH_
 
-#include "engine/EngineConstants.hh"
+#include "EngineConstants.h"
 
 namespace nibbles {
     const unsigned char LEVEL_DATA[LEVELS]

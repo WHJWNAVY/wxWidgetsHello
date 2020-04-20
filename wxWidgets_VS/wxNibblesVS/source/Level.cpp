@@ -20,36 +20,21 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: NibblesApp.hh,v 1.5 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: Level.cc,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _NIBBLESAPP_HH_
-#define _NIBBLESAPP_HH_
-
-namespace nibbles {
-    class NibblesApp : public wxApp {
-        DECLARE_CLASS(NibblesApp)
-        
-    public:
-        /**
-         * Creates a new NibblesApp.
-         */
-        NibblesApp();
-        
-        /**
-         * Destructs this NibblesApp.
-         */
-        ~NibblesApp();
-        
-        /**
-         * Called to initialize this NibblesApp.
-         *
-         * @return true if initialization succeeds; false otherwise.
-         */
-        bool OnInit();
-    };
-    
-    DECLARE_APP(NibblesApp)
-}
-
+#ifdef HAVE_CONFIG_H
+    #include <config.h>
 #endif
+
+#include "Level.h"
+#include "LevelData.h"
+
+using namespace nibbles;
+
+bool Level::isWall(wxPoint point) const {
+    point.x /= BLOCK_SIZE;
+    point.y /= BLOCK_SIZE;
+    
+    return (LEVEL_DATA[level][point.y][point.x] == 1);
+}
 

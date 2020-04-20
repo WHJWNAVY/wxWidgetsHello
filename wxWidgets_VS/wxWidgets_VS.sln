@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wxWidgetstDC", "wxWidgetstD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HabraSnakeVS", "HabraSnakeVS\HabraSnakeVS.vcxproj", "{1912070D-3130-43EE-80C0-B6497BA65035}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wxNibblesVS", "wxNibblesVS\wxNibblesVS.vcxproj", "{956FC839-B577-4730-A2F6-ED2C34557CE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{1912070D-3130-43EE-80C0-B6497BA65035}.Release|x64.Build.0 = Release|x64
 		{1912070D-3130-43EE-80C0-B6497BA65035}.Release|x86.ActiveCfg = Release|Win32
 		{1912070D-3130-43EE-80C0-B6497BA65035}.Release|x86.Build.0 = Release|Win32
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Debug|x64.ActiveCfg = Debug|x64
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Debug|x64.Build.0 = Debug|x64
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Debug|x86.Build.0 = Debug|Win32
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Release|x64.ActiveCfg = Release|x64
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Release|x64.Build.0 = Release|x64
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Release|x86.ActiveCfg = Release|Win32
+		{956FC839-B577-4730-A2F6-ED2C34557CE4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

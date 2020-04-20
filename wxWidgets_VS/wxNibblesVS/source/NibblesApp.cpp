@@ -35,10 +35,10 @@
     #include <wx/wx.h>
 #endif
 
-#include "AppConstants.hh"
-#include "NibblesApp.hh"
-#include "ui/UIConstants.hh"
-#include "ui/NibblesFrame.hh"
+#include "AppConstants.h"
+#include "NibblesApp.h"
+#include "UIConstants.h"
+#include "NibblesFrame.h"
 
 using namespace nibbles;
 
@@ -50,7 +50,7 @@ wxString *nibbles::APP_URL;
 NibblesApp::NibblesApp() {
     // setup the application strings
     APP_NAME = new wxString(wxT("wxNibbles"));
-    APP_VERSION = new wxString(wxT(PACKAGE_VERSION));
+    APP_VERSION = new wxString(wxT("1.0.0"));
     APP_COPYRIGHT = new wxString(wxT("Copyright (C) 2005 CODEpendent"));
     APP_URL = new wxString(wxT("http://code.technoplaza.net/wxNibbles/"));
 }

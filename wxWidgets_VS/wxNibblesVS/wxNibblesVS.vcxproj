@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>wxWidgetstTmplate</ProjectName>
+    <ProjectName>wxNibblesVS</ProjectName>
     <ProjectGuid>{956fc839-b577-4730-a2f6-ed2c34557ce4}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -99,7 +99,7 @@
     <ClCompile>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(wxWidgets)\lib\vc_lib\mswud;$(wxWidgets)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(wxWidgets)\lib\vc_lib\mswud;$(wxWidgets)\include;$(MSBuildProjectDirectory)\source;$(MSBuildProjectDirectory)\source\engine;$(MSBuildProjectDirectory)\source\ui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;__WXMSW__;_UNICODE;_WINDOWS;NOPCH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -256,15 +256,32 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="wxHelloMain.cpp" />
-    <ClCompile Include="wxHelloApp.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="wxHelloMain.h" />
-    <ClInclude Include="wxHelloApp.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\AppConstants.h" />
+    <ClInclude Include="source\EngineConstants.h" />
+    <ClInclude Include="source\Game.h" />
+    <ClInclude Include="source\Level.h" />
+    <ClInclude Include="source\LevelData.h" />
+    <ClInclude Include="source\NibblesApp.h" />
+    <ClInclude Include="source\NibblesFrame.h" />
+    <ClInclude Include="source\NibblesPanel.h" />
+    <ClInclude Include="source\Snake.h" />
+    <ClInclude Include="source\Timer.h" />
+    <ClInclude Include="source\UIConstants.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Game.cpp" />
+    <ClCompile Include="source\Level.cpp" />
+    <ClCompile Include="source\NibblesApp.cpp" />
+    <ClCompile Include="source\NibblesFrame.cpp" />
+    <ClCompile Include="source\NibblesPanel.cpp" />
+    <ClCompile Include="source\Snake.cpp" />
+    <ClCompile Include="source\Timer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

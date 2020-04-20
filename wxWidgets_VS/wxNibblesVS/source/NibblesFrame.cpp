@@ -32,11 +32,11 @@
     #include <wx/wx.h>
 #endif
 
-#include "AppConstants.hh"
-#include "engine/Game.hh"
-#include "ui/UIConstants.hh"
-#include "ui/NibblesFrame.hh"
-#include "ui/NibblesPanel.hh"
+#include "AppConstants.h"
+#include "Game.h"
+#include "UIConstants.h"
+#include "NibblesFrame.h"
+#include "NibblesPanel.h"
 
 using namespace nibbles;
 

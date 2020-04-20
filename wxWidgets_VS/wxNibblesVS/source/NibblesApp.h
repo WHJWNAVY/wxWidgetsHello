@@ -20,27 +20,35 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: UIConstants.hh,v 1.9 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: NibblesApp.h,v 1.5 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _UICONSTANTS_HH_
-#define _UICONSTANTS_HH_
+#ifndef _NIBBLESAPP_HH_
+#define _NIBBLESAPP_HH_
 
-#include <wx/gdicmn.h>
-
-namespace {
-    // UI identifier constants
-    enum {
-        ID_FRAME = 10000,
-        ID_PANEL,
-        IDM_FILE_NEWGAME
+namespace nibbles {
+    class NibblesApp : public wxApp {
+        DECLARE_CLASS(NibblesApp)
+        
+    public:
+        /**
+         * Creates a new NibblesApp.
+         */
+        NibblesApp();
+        
+        /**
+         * Destructs this NibblesApp.
+         */
+        ~NibblesApp();
+        
+        /**
+         * Called to initialize this NibblesApp.
+         *
+         * @return true if initialization succeeds; false otherwise.
+         */
+        bool OnInit();
     };
     
-    /// The size of a block
-    const int BLOCK_SIZE = 16;
-    
-    /// The NibblesPanel size
-    const int PANEL_WIDTH = 640;
-    const int PANEL_HEIGHT = 480;
+    DECLARE_APP(NibblesApp)
 }
 
 #endif

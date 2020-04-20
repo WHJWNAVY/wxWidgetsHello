@@ -20,36 +20,31 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Timer.hh,v 1.3 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: EngineConstants.h,v 1.6 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _TIMER_HH_
-#define _TIMER_HH_
+#ifndef _ENGINECONSTANTS_HH_
+#define _ENGINECONSTANTS_HH_
 
-#include <wx/timer.h>
-
-#include "engine/Game.hh"
+#include "UIConstants.h"
 
 namespace nibbles {
-    class Timer : public wxTimer {
-    private:
-        Game &game;
-    
-        /**
-         * Called when the timer goes off.
-         */
-        void Notify();
-        
-    public:
-        /**
-         * Creates a new Timer.
-         *
-         * @param game The Game to notify when this Timer goes off.
-         */
-        Timer(Game &game);
+    /// The direction the Snake is moving in
+    enum Direction {
+        NORTH, EAST, SOUTH, WEST
     };
     
-    inline Timer::Timer(Game &game) : wxTimer(), game(game) {}
-    inline void Timer::Notify() { game.tick(); }
+    /// The difficulty setting of the Game
+    enum Difficulty {
+        NOVICE, AVERAGE, EXPERT
+    };
+    
+    /// The number of levels defined
+    const unsigned int LEVELS = 1;
+    
+    /// The level data
+    extern const unsigned char LEVEL_DATA[LEVELS]
+                                         [PANEL_HEIGHT / BLOCK_SIZE]
+                                         [PANEL_WIDTH / BLOCK_SIZE];
 }
 
 #endif

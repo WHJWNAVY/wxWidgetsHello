@@ -20,13 +20,24 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Timer.cc,v 1.3 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: AppConstants.h,v 1.4 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifdef HAVE_CONFIG_H
-    #include <config.h>
+#ifndef _APPCONSTANTS_HH_
+#define _APPCONSTANTS_HH_
+
+namespace nibbles {
+    /// The application name
+    extern wxString *APP_NAME;
+    
+    /// The current version
+    extern wxString *APP_VERSION;
+    
+    /// The copyright notice
+    extern wxString *APP_COPYRIGHT;
+    
+    /// The website URL
+    extern wxString *APP_URL;
+}
+
 #endif
-
-#include "Timer.hh"
-
-using namespace nibbles;
 

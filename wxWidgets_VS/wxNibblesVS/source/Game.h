@@ -20,15 +20,15 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Game.hh,v 1.9 2005/08/27 15:29:10 technoplaza Exp $
+// $Id: Game.h,v 1.9 2005/08/27 15:29:10 technoplaza Exp $
 
 #ifndef _GAME_HH_
 #define _GAME_HH_
 
 #include <cstddef>
 
-#include "engine/EngineConstants.hh"
-#include "engine/Level.hh"
+#include "EngineConstants.h"
+#include "Level.h"
 
 namespace nibbles {
     class Snake;

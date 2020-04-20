@@ -20,21 +20,12 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Level.cc,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: Timer.cc,v 1.3 2005/08/27 14:41:32 technoplaza Exp $
 
 #ifdef HAVE_CONFIG_H
     #include <config.h>
 #endif
 
-#include "engine/Level.hh"
-#include "engine/LevelData.hh"
+#include "Timer.h"
 
 using namespace nibbles;
-
-bool Level::isWall(wxPoint point) const {
-    point.x /= BLOCK_SIZE;
-    point.y /= BLOCK_SIZE;
-    
-    return (LEVEL_DATA[level][point.y][point.x] == 1);
-}
-

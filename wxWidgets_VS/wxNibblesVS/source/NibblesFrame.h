@@ -20,7 +20,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: NibblesFrame.hh,v 1.5 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: NibblesFrame.h,v 1.5 2005/08/27 14:41:32 technoplaza Exp $
 
 #ifndef _NIBBLESFRAME_HH_
 #define _NIBBLESFRAME_HH_

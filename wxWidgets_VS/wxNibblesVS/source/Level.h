@@ -20,23 +20,43 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: AppConstants.hh,v 1.4 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: Level.h,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _APPCONSTANTS_HH_
-#define _APPCONSTANTS_HH_
+#ifndef _LEVEL_HH_
+#define _LEVEL_HH_
+
+#include "EngineConstants.h"
 
 namespace nibbles {
-    /// The application name
-    extern wxString *APP_NAME;
+    class Level {
+    private:
+        unsigned int level;
+        
+    public:
+        /**
+         * Creates a new Level.
+         */
+        Level();
     
-    /// The current version
-    extern wxString *APP_VERSION;
+        /**
+         * Checks if a wall exists at the specified point.
+         *
+         * @param point The point to check for a wall at.
+         *
+         * @return true if a wall exists; false otherwise.
+         */
+        bool isWall(wxPoint point) const;
+
+        /**
+         * Gets the current level.
+         *
+         * @return The level.
+         */
+        unsigned int getLevel() const;
+    };
     
-    /// The copyright notice
-    extern wxString *APP_COPYRIGHT;
-    
-    /// The website URL
-    extern wxString *APP_URL;
+    inline Level::Level() : level(0) {}
+    inline unsigned int Level::getLevel() const { return level; }
 }
 
 #endif

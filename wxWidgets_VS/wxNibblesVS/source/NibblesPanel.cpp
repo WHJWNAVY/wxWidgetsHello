@@ -34,9 +34,9 @@
 
 #include <wx/dcbuffer.h>
 
-#include "engine/Level.hh"
-#include "engine/Snake.hh"
-#include "ui/NibblesPanel.hh"
+#include "Level.h"
+#include "Snake.h"
+#include "NibblesPanel.h"
 
 using namespace nibbles;
 
@@ -59,7 +59,7 @@ void NibblesPanel::drawLevel(wxDC &dc) {
     const Level &level = game.getLevel();
     
     // begin drawing
-    dc.BeginDrawing();
+    //dc.BeginDrawing();
     
     // draw the walls
     dc.SetPen(*wxBLACK_PEN);
@@ -74,14 +74,14 @@ void NibblesPanel::drawLevel(wxDC &dc) {
     }
     
     // end drawing
-    dc.EndDrawing();
+    //dc.EndDrawing();
 }
 
 void NibblesPanel::drawSnake(wxDC &dc) {
     const std::vector<wxPoint> &segments = game.getSnake().getSegments();
     
     // begin drawing
-    dc.BeginDrawing();
+    //dc.BeginDrawing();
     
     // draw the head
     dc.SetPen(*wxGREEN_PEN);
@@ -98,12 +98,12 @@ void NibblesPanel::drawSnake(wxDC &dc) {
     }
     
     // end drawing
-    dc.EndDrawing();
+    //dc.EndDrawing();
 }
 
 void NibblesPanel::drawApple(wxDC &dc) {
     // begin drawing
-    dc.BeginDrawing();
+    //dc.BeginDrawing();
     
     // draw the apple
     dc.SetPen(*wxRED_PEN);
@@ -118,7 +118,7 @@ void NibblesPanel::drawApple(wxDC &dc) {
     dc.DrawCircle(apple, radius);
     
     // end drawing
-    dc.EndDrawing();
+    //dc.EndDrawing();
 }
 
 void NibblesPanel::onPaint(wxPaintEvent &) {
@@ -165,7 +165,7 @@ void NibblesPanel::onPaint(wxPaintEvent &) {
 }
 
 void NibblesPanel::onKeyDown(wxKeyEvent &event) {
-    switch (event.m_keyCode) {
+    switch (event.GetKeyCode()) {
         case WXK_PAUSE:
             // (un)pause the game
             game.togglePause();

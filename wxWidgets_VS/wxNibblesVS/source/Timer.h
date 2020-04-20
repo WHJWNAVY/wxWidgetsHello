@@ -20,43 +20,36 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-// $Id: Level.hh,v 1.2 2005/08/27 14:41:32 technoplaza Exp $
+// $Id: Timer.h,v 1.3 2005/08/27 14:41:32 technoplaza Exp $
 
-#ifndef _LEVEL_HH_
-#define _LEVEL_HH_
+#ifndef _TIMER_HH_
+#define _TIMER_HH_
 
-#include "EngineConstants.hh"
+#include <wx/timer.h>
+
+#include "Game.h"
 
 namespace nibbles {
-    class Level {
+    class Timer : public wxTimer {
     private:
-        unsigned int level;
+        Game &game;
+    
+        /**
+         * Called when the timer goes off.
+         */
+        void Notify();
         
     public:
         /**
-         * Creates a new Level.
-         */
-        Level();
-    
-        /**
-         * Checks if a wall exists at the specified point.
+         * Creates a new Timer.
          *
-         * @param point The point to check for a wall at.
-         *
-         * @return true if a wall exists; false otherwise.
+         * @param game The Game to notify when this Timer goes off.
          */
-        bool isWall(wxPoint point) const;
-
-        /**
-         * Gets the current level.
-         *
-         * @return The level.
-         */
-        unsigned int getLevel() const;
+        Timer(Game &game);
     };
     
-    inline Level::Level() : level(0) {}
-    inline unsigned int Level::getLevel() const { return level; }
+    inline Timer::Timer(Game &game) : wxTimer(), game(game) {}
+    inline void Timer::Notify() { game.tick(); }
 }
 
 #endif
