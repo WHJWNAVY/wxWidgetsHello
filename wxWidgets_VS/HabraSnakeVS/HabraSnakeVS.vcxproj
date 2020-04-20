@@ -18,9 +18,34 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDialog.h" />
+    <ClInclude Include="background_jpg.h" />
+    <ClInclude Include="HabraSnakeApp.h" />
+    <ClInclude Include="HabraSnakeCanvas.h" />
+    <ClInclude Include="HabraSnakeDocument.h" />
+    <ClInclude Include="HabraSnakeMainFrame.h" />
+    <ClInclude Include="HabraSnakeView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDialog.cpp" />
+    <ClCompile Include="HabraSnakeApp.cpp" />
+    <ClCompile Include="HabraSnakeCanvas.cpp" />
+    <ClCompile Include="HabraSnakeDocument.cpp" />
+    <ClCompile Include="HabraSnakeMainFrame.cpp" />
+    <ClCompile Include="HabraSnakeView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HabraSnake.cbp" />
+    <None Include="HabraSnake.cd" />
+    <None Include="HabraSnake.pjd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HabraSnake.rc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>wxWidgetstDC</ProjectName>
-    <ProjectGuid>{326cae18-ae94-4f00-90a1-02d0822c5301}</ProjectGuid>
+    <ProjectName>HabraSnakeVS</ProjectName>
+    <ProjectGuid>{1912070d-3130-43ee-80c0-b6497ba65035}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -255,17 +280,6 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Bscmake>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ResourceCompile Include="resource.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="wxHelloApp.h" />
-    <ClInclude Include="wxWidgetstDCMain.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="wxHelloApp.cpp" />
-    <ClCompile Include="wxWidgetstDCMain.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

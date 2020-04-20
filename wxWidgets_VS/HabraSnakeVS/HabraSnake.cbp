@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HabraSnake" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../bin/Linux/HabraSnake" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`wx-config --cflags`" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="AboutDialog.cpp" />
+		<Unit filename="AboutDialog.h" />
+		<Unit filename="HabraSnakeApp.cpp" />
+		<Unit filename="HabraSnakeApp.h" />
+		<Unit filename="HabraSnakeCanvas.cpp" />
+		<Unit filename="HabraSnakeCanvas.h" />
+		<Unit filename="HabraSnakeDocument.cpp" />
+		<Unit filename="HabraSnakeDocument.h" />
+		<Unit filename="HabraSnakeMainFrame.cpp" />
+		<Unit filename="HabraSnakeMainFrame.h" />
+		<Unit filename="HabraSnakeView.cpp" />
+		<Unit filename="HabraSnakeView.h" />
+		<Unit filename="background_jpg.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

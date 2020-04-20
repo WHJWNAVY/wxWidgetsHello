@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AboutDialog">
+    <Position X="7.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAhEAAAABAAIQAAAAAAAAACAAAWAAAAACkQAIAIA=</HashCode>
+      <FileName>AboutDialog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabraSnakeApp">
+    <Position X="3.25" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAAAAAAAAQAAAAAAAAAAAwASQAAAACkAgAAIA=</HashCode>
+      <FileName>HabraSnakeApp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabraSnakeCanvas">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AECIAhAAAAEBAAAQAABAAABIACIAAWAQBAAHkBCIIIA=</HashCode>
+      <FileName>HabraSnakeCanvas.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabraSnakeDocument">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>sAMACIAAAAAAAAIQCAAAAAAAAAAAAQAKQACAgACEAIE=</HashCode>
+      <FileName>HabraSnakeDocument.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabraSnakeMainFrame">
+    <Position X="7.25" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAhAAoAAAAAAQCAAAAQAIACAAAWAAAAACkAAIAIA=</HashCode>
+      <FileName>HabraSnakeMainFrame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HabraSnakeView">
+    <Position X="5.25" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Typedef Name="HabraSnakeView::MovementFunction" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>HabraSnakeView.h</NewMemberFileName>
+        </TypeIdentifier>
+      </Typedef>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAACAFAACUAABAAAAAAAIAASAAAAoAkhEAWII=</HashCode>
+      <FileName>HabraSnakeView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

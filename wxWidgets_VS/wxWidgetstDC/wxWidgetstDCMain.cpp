@@ -21,7 +21,7 @@ MyFrameHello::MyFrameHello(wxWindow* parent, wxWindowID id, const wxString& titl
     //wxBoxSizer* bSizerMain;
     bSizerMain = new wxBoxSizer(wxHORIZONTAL);
 
-    mBitmapMain = new wxStaticBitmap(this, wxID_ANY, wxNullBitmap, wxDefaultPosition, wxDefaultSize, 0);
+    mBitmapMain = new wxStaticBitmap(this, wxID_ANY, wxNullBitmap, wxDefaultPosition, /*wxDefaultSize*/wxSize(300, 300), 0);
     bSizerMain->Add(mBitmapMain, 6, wxALL | wxEXPAND, 5);
 
     wxStaticBoxSizer* sbSizerCtrlInfo;
@@ -108,6 +108,7 @@ MyFrameHello::MyFrameHello(wxWindow* parent, wxWindowID id, const wxString& titl
     this->Connect(wxEVT_SIZE, wxSizeEventHandler(MyFrameHello::MyFrameHelloOnSize));
     mButtonRenew->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MyFrameHello::mButtonRenewOnButtonClick), NULL, this);
     mButtonStop->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MyFrameHello::mButtonStopOnButtonClick), NULL, this);
+    mButtonAbout->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(MyFrameHello::mButtonAboutOnButtonClick), NULL, this);
 }
 
 MyFrameHello::~MyFrameHello()
@@ -128,13 +129,33 @@ void MyFrameHello::mButtonRenewOnButtonClick(wxCommandEvent& event)
     msgs << wxT(",") << std::to_string(bSizerMain->GetSize().GetY()) << wxT(")");
     msgs << wxT("(") << std::to_string(mBitmapMain->GetSize().GetX());
     msgs << wxT(",") << std::to_string(mBitmapMain->GetSize().GetY()) << wxT(")");
+    msgs << wxT("(") << std::to_string(mBitmapMain->GetClientSize().GetX());
+    msgs << wxT(",") << std::to_string(mBitmapMain->GetClientSize().GetY()) << wxT(")");
     wxMessageBox(msgs, wxT("wxHelloWorld")); // _("xxx") 为了把字符串翻译成指定的语言
 }
 
 void MyFrameHello::mButtonStopOnButtonClick(wxCommandEvent& event)
 {
-    wxClientDC dc(mBitmapMain);
-    wxPen pen(*wxRED, 1);
-    dc.SetPen(/**wxRED_PEN*/pen);
-    dc.DrawLine(0, 0, mBitmapMain->GetSize().GetX(), mBitmapMain->GetSize().GetY());
+    //wxClientDC dc(mBitmapMain);
+    //wxPen pen(*wxRED, 1);
+    //dc.SetPen(/**wxRED_PEN*/pen);
+    //dc.DrawLine(0, 0, mBitmapMain->GetSize().GetX(), mBitmapMain->GetSize().GetY());
+
+    wxBitmap bitmap= (mBitmapMain->GetClientSize());
+    wxMemoryDC mdc(bitmap);
+    mdc.SetBackground(*wxBLUE_BRUSH);
+    mdc.Clear();
+    mdc.SetPen(*wxRED_PEN);
+    mdc.SetBrush(*wxRED_BRUSH);
+    mdc.DrawRectangle(wxRect(10, 10, 50, 50));
+    mdc.DrawCircle(200, 200, 50);
+    mdc.SelectObject(wxNullBitmap);
+    mBitmapMain->SetBitmap(bitmap);
 }
+
+void MyFrameHello::mButtonAboutOnButtonClick(wxCommandEvent& event)
+{
+    mBitmapMain->SetBackgroundColour(*wxBLUE);
+    mBitmapMain->ClearBackground();
+}
+

@@ -57,6 +57,7 @@ protected:
     virtual void MyFrameHelloOnSize(wxSizeEvent& event) { event.Skip(); }
     void mButtonRenewOnButtonClick(wxCommandEvent& event);
     void mButtonStopOnButtonClick(wxCommandEvent& event);
+    void mButtonAboutOnButtonClick(wxCommandEvent& event);
 
 public:
 
